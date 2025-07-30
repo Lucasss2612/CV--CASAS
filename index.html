@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucas Casas - Desarrollador Frontend</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Portfolio profesional de Lucas Casas, desarrollador frontend.">
+</head>
+
+<body>
+  <main class="container">
+    <div class="content">
+      <h1>Lucas Casas</h1>
+      <h2>Desarrollador Frontend</h2>
+      <p>Apasionado por el desarrollo web, especializado en React, JavaScript, HTML y CSS. Experiencia construyendo interfaces modernas y responsivas.</p>
+
+      <div class="buttons">
+        <a href="https://github.com/Lucasss2612" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lucas-martin-casás-6ba327225/" target="_blank">LinkedIn</a>
+        <a href="assets/lucas-casas-cv.pdf" download>Descargar CV</a>
+      </div>
+    </div>
+    <section class="skills">
+        <h3>Skills</h3>
+        <div class="skills-list">
+            <div>
+            <h4>Frontend</h4>
+            <ul>
+                <li>React.js</li>
+                <li>JavaScript</li>
+                <li>HTML5 / CSS3</li>
+            </ul>
+            </div>
+            <div>
+            <h4>Backend</h4>
+            <ul>
+                <li>Node.js</li>
+                <li>Python (FastAPI)</li>
+                <li>Java / PHP</li>
+            </ul>
+            </div>
+            <div>
+            <h4>Base de Datos</h4>
+            <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+            </ul>
+            </div>
+            <div>
+            <h4>Herramientas</h4>
+            <ul>
+                <li>Git / GitHub</li>
+                <li>Docker</li>
+                <li>CI/CD</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+    <section class="certificado">
+      <h3>Certificado </h3>
+        <div class="certificado-doc">
+          <img src="assets/cc.png" alt="Certificado de Lucas" class="zoomable" />
+        </div>
+
+      <!-- Modal para ampliar -->
+      <div id="modal" class="modal">
+        <span id="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" alt="Imagen ampliada" />
+      </div>
+    </section>
+    <div class="cc">
+          <img src="assets/fotolucas.jpg" alt="Foto de Lucas Casas" class="zoomable" />
+    </div>
+
+  </main>
+  <!-- justo antes de </body> -->
+<script>
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.getElementById("modal-close");
+  const zoomables = document.querySelectorAll(".zoomable");
+
+  zoomables.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+</body>
+</html>
