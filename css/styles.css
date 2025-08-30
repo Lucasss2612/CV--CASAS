@@ -108,13 +108,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .certificado-img img,
 .certificado-doc img {
-  max-width: 300px;
+  height: 200px;
+  width: 280px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
